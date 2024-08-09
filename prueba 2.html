@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="inputt" type="number">
+    <button onclick="calcular()">Calcular</button>
+    <div class="resultado">
+
+    </div>
+
+    <script>
+
+       function calcular() {
+            valores = document.querySelector("input").value;
+            
+            let valor1 = valores / 60
+            let valor2= valores / 3600
+            let valor3 = valores / 86400
+
+            const conteneee = document.querySelector(".resultado")
+            const h1 = document.createElement("H3")
+            h1_content = document.createTextNode("MINUTOS: " + valor1)
+            h1.appendChild(h1_content)
+            conteneee.appendChild(h1)
+
+            const h2 = document.createElement("H3")
+            h2_content = document.createTextNode("HORAS: " + valor2)
+            h2.appendChild(h2_content)
+            conteneee.appendChild(h2)
+
+            const h3 = document.createElement("H3")
+            h3_content = document.createTextNode("DIAS: " + valor3)
+            h3.appendChild(h3_content)
+            conteneee.appendChild(h3)
+        }
+
+
+    </script>
+
+</body>
+</html>
